@@ -10811,15 +10811,23 @@ article.article .article-meta {
   overflow-x: auto;
   margin-bottom: 0.5rem;
 }
+article.article .title {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: -1.4px;
+}
 article.article .content {
   word-wrap: break-word;
   font-size: 1.1rem;
 }
 article.article .content h1 {
   font-size: 1.75em;
+  font-weight: 600;
+  margin-top: 50px;
 }
 article.article .content h2 {
   font-size: 1.5em;
+  margin-top: 35px;
 }
 article.article .content h3 {
   font-size: 1.25em;
