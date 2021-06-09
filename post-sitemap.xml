@@ -10,79 +10,7 @@
 
     <url>
         <loc>https://rimiiii.github.io/2021/05/11/event-prediction/</loc>
-        <lastmod>2021-06-09T06:34:39.373Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/04/29/tech-blog/</loc>
-        <lastmod>2021-06-09T06:26:25.224Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/04/30/notion-template/</loc>
-        <lastmod>2021-06-09T06:19:33.949Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/05/27/baekjoon7/</loc>
-        <lastmod>2021-06-09T06:09:26.718Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/04/19/baekjoon3/</loc>
-        <lastmod>2021-06-09T06:08:07.738Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/04/15/baekjoon2/</loc>
-        <lastmod>2021-06-09T06:07:34.845Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/05/27/baekjoon6/</loc>
-        <lastmod>2021-06-09T05:58:18.444Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/05/27/baekjoon5/</loc>
-        <lastmod>2021-06-09T05:57:04.088Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/05/06/baekjoon4/</loc>
-        <lastmod>2021-06-09T05:51:53.488Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/03/29/baekjoon1/</loc>
-        <lastmod>2021-06-09T05:50:23.800Z</lastmod>
+        <lastmod>2021-06-09T15:13:05.367Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -90,7 +18,79 @@
 
     <url>
         <loc>https://rimiiii.github.io/2021/06/09/midnight-library/</loc>
-        <lastmod>2021-06-09T05:37:13.975Z</lastmod>
+        <lastmod>2021-06-09T15:12:43.635Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/04/30/notion-template/</loc>
+        <lastmod>2021-06-09T15:12:35.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/04/29/tech-blog/</loc>
+        <lastmod>2021-06-09T15:12:28.814Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/03/29/baekjoon1/</loc>
+        <lastmod>2021-06-09T15:12:04.526Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/04/15/baekjoon2/</loc>
+        <lastmod>2021-06-09T15:11:56.670Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/04/19/baekjoon3/</loc>
+        <lastmod>2021-06-09T15:11:49.222Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/05/06/baekjoon4/</loc>
+        <lastmod>2021-06-09T15:11:38.185Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/05/27/baekjoon5/</loc>
+        <lastmod>2021-06-09T15:11:28.613Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/05/27/baekjoon6/</loc>
+        <lastmod>2021-06-09T15:11:16.370Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/05/27/baekjoon7/</loc>
+        <lastmod>2021-06-09T15:10:22.323Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
