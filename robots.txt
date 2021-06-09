@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rimiiii.github.io/sitemap.xml
