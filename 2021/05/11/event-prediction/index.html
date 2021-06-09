@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>#1. EHR 데이터를 이용한 이벤트 예측 프로젝트 - Rimiiii&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Rimiiii"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Rimiiii"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="EHR 데이터를 이용하여 이벤트를 예측하는 프로젝트를 진행하려합니다. 사용할 데이터는 ICU 데이터이며 오픈소스인 MIMIC3입니다. 어떤 이벤트를 예측할지 아직 고민중이고 우선적으로 MIMIC3의 주요 컬럼들을 리뷰하였습니다."><meta property="og:type" content="blog"><meta property="og:title" content="#1. EHR 데이터를 이용한 이벤트 예측 프로젝트"><meta property="og:url" content="https://rimiiii.github.io/2021/05/11/event-prediction/"><meta property="og:site_name" content="Rimiiii&#039;s Blog"><meta property="og:description" content="EHR 데이터를 이용하여 이벤트를 예측하는 프로젝트를 진행하려합니다. 사용할 데이터는 ICU 데이터이며 오픈소스인 MIMIC3입니다. 어떤 이벤트를 예측할지 아직 고민중이고 우선적으로 MIMIC3의 주요 컬럼들을 리뷰하였습니다."><meta property="og:locale" content="en_US"><meta property="og:image" content="https://rimiiii.github.io/gallery/covers/event-prediction.jpg"><meta property="article:published_time" content="2021-05-11T14:16:29.000Z"><meta property="article:modified_time" content="2021-06-09T06:34:39.373Z"><meta property="article:author" content="Rimiiii"><meta property="article:tag" content="ehr"><meta property="article:tag" content="prediction"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/gallery/covers/event-prediction.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://rimiiii.github.io/2021/05/11/event-prediction/"},"headline":"#1. EHR 데이터를 이용한 이벤트 예측 프로젝트","image":["https://rimiiii.github.io/gallery/covers/event-prediction.jpg"],"datePublished":"2021-05-11T14:16:29.000Z","dateModified":"2021-06-09T06:34:39.373Z","author":{"@type":"Person","name":"Rimiiii"},"publisher":{"@type":"Organization","name":"Rimiiii's Blog","logo":{"@type":"ImageObject","url":{"text":"Rimiiii's Blog"}}},"description":"EHR 데이터를 이용하여 이벤트를 예측하는 프로젝트를 진행하려합니다. 사용할 데이터는 ICU 데이터이며 오픈소스인 MIMIC3입니다. 어떤 이벤트를 예측할지 아직 고민중이고 우선적으로 MIMIC3의 주요 컬럼들을 리뷰하였습니다."}</script><link rel="canonical" href="https://rimiiii.github.io/2021/05/11/event-prediction/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/dracula.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Rimiiii&#039;s Blog</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/rimiiii"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/gallery/covers/event-prediction.jpg" alt="#1. EHR 데이터를 이용한 이벤트 예측 프로젝트"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-05-11T14:16:29.000Z" title="2021. 5. 11. 오후 11:16:29">2021-05-11</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-06-09T06:34:39.373Z" title="2021. 6. 9. 오후 3:34:39">2021-06-09</time></span><span class="level-item"><a class="link-muted" href="/categories/DEEP-LEARNING/">DEEP LEARNING</a><span> / </span><a class="link-muted" href="/categories/DEEP-LEARNING/HEALTHCARE/">HEALTHCARE</a></span></div></div><h1 class="title is-3 is-size-4-mobile">#1. EHR 데이터를 이용한 이벤트 예측 프로젝트</h1><div class="content"><p>EHR 데이터를 이용하여 이벤트를 예측하는 프로젝트를 진행하려합니다. 사용할 데이터는 ICU 데이터이며 오픈소스인 MIMIC3입니다. 어떤 이벤트를 예측할지 아직 고민중이고 우선적으로 MIMIC3의 주요 컬럼들을 리뷰하였습니다. </p>
+<span id="more"></span>
+
+<p>이 컬럼들 중에서 필요한 것들과 그렇지 않은 것들을 걸러내야되고 어떤 이벤트를 예측할지는 논문을 읽으며 결정할 것입니다. MIMIC3의 주요 컬럼들은 아래와 같습니다. 의료 도메인이 아니기 때문에 이해가 안가는 컬럼들과 잘못 해석한 것들이 있을 수 있습니다. 혹시나 첨언해주실 분이 있으면 정말 감사하겠습니다😆</p>
+<p>MIMIC 데이터베이스 문서 링크: <a target="_blank" rel="noopener" href="https://mimic.physionet.org/about/mimic/">https://mimic.physionet.org/about/mimic/</a></p>
+<h1 id="MIMIC3-주요-컬럼-리뷰"><a href="#MIMIC3-주요-컬럼-리뷰" class="headerlink" title="MIMIC3 주요 컬럼 리뷰"></a>MIMIC3 주요 컬럼 리뷰</h1><h2 id="ADMISSION"><a href="#ADMISSION" class="headerlink" title="ADMISSION"></a>ADMISSION</h2><ul>
+<li>ROW_ID</li>
+<li>SUBJECT_ID: PATIENTS 테이블과 연결할 수 있는 key값</li>
+<li>HADM_ID: key값</li>
+<li>ADMITTIME: 환자가 병원에서 입원한 날짜와 시간</li>
+<li>DISCHTIME: 환자가 병원에서 퇴원한 날짜와 시간</li>
+<li>DEATHTIME: 환자가 사망했을 경우 사망 날짜와 시간</li>
+<li>ADMISSION_TYPE(urgent랑 emergency랑 뭐가 다름?)</li>
+<li>ELECTIVE: 계획된 입원</li>
+<li>URGENT: 긴급 입원</li>
+<li>NEWBORN: 출생</li>
+<li>EMERGENCY: 응급</li>
+<li>INSURANCE: 보험 청구</li>
+<li>private</li>
+<li>medicare</li>
+<li>EDREGTIME: emergency department에서 등록된 시간</li>
+<li>EDOUTTIME: emergency department에서 퇴원한 시간</li>
+<li>DIAGNOSIS: 진단</li>
+<li>HOSPITAL_EXPIRE_FLAG: 사망했을 경우 1, 생존했을 경우 0</li>
+<li>HAS_CHARTEVENTS_DATA</li>
+</ul>
+<h2 id="D-ICD-DIAGNOSES"><a href="#D-ICD-DIAGNOSES" class="headerlink" title="D_ICD_DIAGNOSES"></a>D_ICD_DIAGNOSES</h2><p>ICD9 진단코드</p>
+<ul>
+<li>ROW_ID</li>
+<li>ICD9_CODE</li>
+<li>SHORT_TITLE</li>
+<li>LONG_TITLE</li>
+</ul>
+<h2 id="D-ICD-PROCEDURES"><a href="#D-ICD-PROCEDURES" class="headerlink" title="D_ICD_PROCEDURES"></a>D_ICD_PROCEDURES</h2><p>ICD9 처치코드</p>
+<ul>
+<li>ROW_ID</li>
+<li>ICD9_CODE</li>
+<li>SHORT_TITLE</li>
+<li>LONG_TITLE</li>
+</ul>
+<h2 id="D-ITEMS"><a href="#D-ITEMS" class="headerlink" title="D_ITEMS"></a>D_ITEMS</h2><p>ICU 데이터베이스 안의 모든 아이템 정의. 2개의 다른 ICU 데이터베이스들이 합쳐지면서 같은 의미지만 다른 이름으로 쓰이는 것들이 존재함. 결과적으로 ITEMID는 다르지만 하나의 concept(LABEL)로 되어있다.<br>LINKSTO가 null값인 경우는 현재 이용불가능한 데이터이며 release될 예정이다.</p>
+<ul>
+<li>ROW_ID</li>
+<li>ITEMID</li>
+<li>LABEL: ITEMID로부터 재정의된 concept</li>
+<li>ABBREVIATION: label의 약자, metavision인 경우에만 이용가능함</li>
+<li>DBSOURCE</li>
+<li>carevue</li>
+<li>metavision</li>
+<li>hospital</li>
+<li>CATEGORY: ITEMID가 해당하는 데이터 유형, 예를 들어 ABG의 경우 정맥 주사를 하기 때문에 IV Medication</li>
+<li>UNITNAME: ITEMID의 측정단위</li>
+<li>PARAM_TYPE: 기록된 데이터의 타입(날짜, 숫자, 텍스트 등)</li>
+<li>CONCEPTID</li>
+</ul>
+<h2 id="D-LABITEMS"><a href="#D-LABITEMS" class="headerlink" title="D_LABITEMS"></a>D_LABITEMS</h2><p>Labitem 정보들</p>
+<ul>
+<li>ROW_ID</li>
+<li>ITEM_ID</li>
+<li>LABEL</li>
+<li>FLUID: 액체 카테고리로 보임(복수, 뇌척수액 등)</li>
+<li>CATEGORY: 검사종류(hematology, blood gas, chemistry)</li>
+<li>LOINC_CODE</li>
+</ul>
+<h2 id="DIAGNOSES-ICD"><a href="#DIAGNOSES-ICD" class="headerlink" title="DIAGNOSES_ICD"></a>DIAGNOSES_ICD</h2><p>ICD9 기반</p>
+<ul>
+<li>SUBJECT_ID: 환자 ID</li>
+<li>HADM_ID: 환자입원 ID</li>
+<li>SEQ_NUM: 질병 우선순위 순서</li>
+</ul>
+<h2 id="DRGCODES"><a href="#DRGCODES" class="headerlink" title="DRGCODES"></a>DRGCODES</h2><p>입원ID별로 심각성을 알 수 있음<br>진단 관련 그룹 코드, 포괄수가제(입원해서 퇴원할 때까지 발생하는 진료에 대해 질병마다 미리 정해진 금액을 내는 제도)</p>
+<ul>
+<li>DRG_TYPE: HCFA/MS/APR</li>
+<li>DRG_CODE: 진단 금액 코드</li>
+<li>DESCRIPTION: drg code 요약글</li>
+<li>DRG_SEVERITY: drg 심각성, 심각한 경우 더 높은 청구 비용을 허용함</li>
+<li>DRG_MORTALITY: 사망률</li>
+</ul>
+<h2 id="LABEVENTS"><a href="#LABEVENTS" class="headerlink" title="LABEVENTS"></a>LABEVENTS</h2><p>measurements기반의 laboratory 데이터</p>
+<ul>
+<li>SUBJECT_ID</li>
+<li>HADM_ID</li>
+<li>ITEM_ID</li>
+<li>CHARTTIME</li>
+<li>VALUE: measure값</li>
+<li>VALUENUM: value가 numeric인 경우 numeric format으로 기재되어있음</li>
+<li>VALUEUOM: value의 단위</li>
+<li>FLAG: value가 abnormal인지 아닌지(delta가 무슨의미인지 확인할것)</li>
+</ul>
+<h2 id="MICROBIOLOGYEVENTS"><a href="#MICROBIOLOGYEVENTS" class="headerlink" title="MICROBIOLOGYEVENTS"></a>MICROBIOLOGYEVENTS</h2><p>미생물학정보<br>ABTEST: a: control, b: treatment</p>
+<ul>
+<li>SUBJECT_ID</li>
+<li>HADM_ID</li>
+<li>CHARTDATE: 차트날짜</li>
+<li>CHARTTIME: 차트날짜+시간</li>
+<li>SPEC_ITEMID: specimen itemid</li>
+<li>SPEC_TYPE_DESC</li>
+<li>ORG_ITEM_ID</li>
+<li>ORG_NAME: 조직이름</li>
+<li>ISOLATE_NUM</li>
+<li>AB_ITEMID</li>
+<li>AB_NAME</li>
+<li>DILUTION_TEXT: 비교정보 텍스트</li>
+<li>DILUTION_COMPARISON</li>
+<li>DILUTION_VALUE</li>
+<li>INTERPRETATION</li>
+</ul>
+<h2 id="PATIENTS"><a href="#PATIENTS" class="headerlink" title="PATIENTS"></a>PATIENTS</h2><ul>
+<li>SUBJECT_ID</li>
+<li>GENDER</li>
+<li>DOB: date of birth</li>
+<li>DOD: date of death</li>
+<li>DOD_HOSP: 병원에서 기록된 사망 날짜</li>
+<li>DOD_SSN: social security database에서 기록된 사망 날짜</li>
+<li>EXPIRE_FLAG: 사망했을 경우 1, 아닐 경우 0</li>
+</ul>
+<h2 id="PRESCRIPTIONS"><a href="#PRESCRIPTIONS" class="headerlink" title="PRESCRIPTIONS"></a>PRESCRIPTIONS</h2><ul>
+<li>ROW_ID</li>
+<li>SUBJECT_ID</li>
+<li>HADM_ID</li>
+<li>ICUSTAY_ID</li>
+<li>STARTDATE</li>
+<li>ENDDATE</li>
+<li>DRUG_TYPE: MAIN, BASE, ADDITIVE가 있음</li>
+<li>DRUG_NAME</li>
+<li>DRUG_NAME_POE: DRUG_NAME과 같거나 nan이거나</li>
+<li>DRUG_NAME_GENERIC</li>
+<li>FORMULARY_DRUG_CD, GSN, NDC: 다른 drug code</li>
+<li>GSN: Generic Sequence Number</li>
+<li>NDC: National Drug Code</li>
+<li>PROD_STRENGTH: 약물의 단위별 용량</li>
+<li>DOSE_VAL_RX: 처방한 용량 값</li>
+<li>DOSE_UNIT_RX: 처방한 용량 단위</li>
+<li>FORM_VAL_DISP: 처방된 용량을 맞추기 위해 처방된 갯수</li>
+<li>FROM_UNIT_DISP</li>
+<li>ROUTE: 약물이 들어가는 루트</li>
+<li>PROD_STRENGH * FORM_VAL_DISP  = DOSE_VAL_RX</li>
+</ul>
+<h2 id="PROCEDUREEVENTS-MV"><a href="#PROCEDUREEVENTS-MV" class="headerlink" title="PROCEDUREEVENTS_MV"></a>PROCEDUREEVENTS_MV</h2><p>설명이 없음..procedure가 metavision인 경우 이곳에 추가 데이터가 저장되어있는 것으로 보임</p>
+<ul>
+<li>ROW_ID</li>
+<li>SUBJECT_ID</li>
+<li>HADM_ID</li>
+<li>ICUSTAY_ID</li>
+<li>STARTTIME</li>
+<li>ENDTIME</li>
+<li>ITEMID</li>
+<li>VALUE</li>
+<li>VALUEUOM</li>
+<li>LOCATION</li>
+<li>LOCATIONCATEGORY</li>
+<li>STORETIME</li>
+<li>CGID</li>
+<li>ORDERID</li>
+<li>LINKORDERID</li>
+<li>ORDER CATEGORY NAME</li>
+<li>SECONDARY ORDER CATEROY NANE</li>
+<li>ORDER CATEGORY DESCRIPTION</li>
+<li>ISOPENBAG</li>
+<li>CONTINUE IN NEXT DEPT</li>
+<li>CANCEL REASON</li>
+<li>STATUS DESCRIPTION</li>
+<li>COMMENTS_DITDBY</li>
+<li>COMMENTS_CANCELEDBY</li>
+<li>COMMENTS_DATE</li>
+</ul>
+<h2 id="PROCEDURES-ICD"><a href="#PROCEDURES-ICD" class="headerlink" title="PROCEDURES_ICD"></a>PROCEDURES_ICD</h2><ul>
+<li>SUBJECT_ID</li>
+<li>HADM_ID</li>
+<li>SEQ_NUM: 우선순위</li>
+<li>ICD9_CODE: procedure code, D_ICD_PROCEDURES와 join 가능</li>
+</ul>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/ehr/">ehr</a><a class="link-muted mr-2" rel="tag" href="/tags/prediction/">prediction</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/05/27/baekjoon6/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">[Python/백준] 10818번 최소, 최대</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/05/06/baekjoon4/"><span class="level-item">[Python/백준] 4344번 평균은 넘겠지</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://rimiiii.github.io/2021/05/11/event-prediction/';
+            this.page.identifier = 'rimiiii';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'my-hexo-blog-8' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#MIMIC3-주요-컬럼-리뷰"><span class="level-left"><span class="level-item">1</span><span class="level-item">MIMIC3 주요 컬럼 리뷰</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#ADMISSION"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">ADMISSION</span></span></a></li><li><a class="level is-mobile" href="#D-ICD-DIAGNOSES"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">D_ICD_DIAGNOSES</span></span></a></li><li><a class="level is-mobile" href="#D-ICD-PROCEDURES"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">D_ICD_PROCEDURES</span></span></a></li><li><a class="level is-mobile" href="#D-ITEMS"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">D_ITEMS</span></span></a></li><li><a class="level is-mobile" href="#D-LABITEMS"><span class="level-left"><span class="level-item">1.5</span><span class="level-item">D_LABITEMS</span></span></a></li><li><a class="level is-mobile" href="#DIAGNOSES-ICD"><span class="level-left"><span class="level-item">1.6</span><span class="level-item">DIAGNOSES_ICD</span></span></a></li><li><a class="level is-mobile" href="#DRGCODES"><span class="level-left"><span class="level-item">1.7</span><span class="level-item">DRGCODES</span></span></a></li><li><a class="level is-mobile" href="#LABEVENTS"><span class="level-left"><span class="level-item">1.8</span><span class="level-item">LABEVENTS</span></span></a></li><li><a class="level is-mobile" href="#MICROBIOLOGYEVENTS"><span class="level-left"><span class="level-item">1.9</span><span class="level-item">MICROBIOLOGYEVENTS</span></span></a></li><li><a class="level is-mobile" href="#PATIENTS"><span class="level-left"><span class="level-item">1.10</span><span class="level-item">PATIENTS</span></span></a></li><li><a class="level is-mobile" href="#PRESCRIPTIONS"><span class="level-left"><span class="level-item">1.11</span><span class="level-item">PRESCRIPTIONS</span></span></a></li><li><a class="level is-mobile" href="#PROCEDUREEVENTS-MV"><span class="level-left"><span class="level-item">1.12</span><span class="level-item">PROCEDUREEVENTS_MV</span></span></a></li><li><a class="level is-mobile" href="#PROCEDURES-ICD"><span class="level-left"><span class="level-item">1.13</span><span class="level-item">PROCEDURES_ICD</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Rimiiii&#039;s Blog</a><p class="is-size-7"><span>&copy; 2021 Rimiiii</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
