@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://rimiiii.github.io/2021/05/11/event-prediction/</loc>
+        <lastmod>2021-06-11T03:06:38.442Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://rimiiii.github.io/2021/04/15/baekjoon2/</loc>
         <lastmod>2021-06-11T02:31:02.540Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -51,14 +59,6 @@
     <url>
         <loc>https://rimiiii.github.io/2021/05/27/baekjoon7/</loc>
         <lastmod>2021-06-11T02:30:13.601Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/05/11/event-prediction/</loc>
-        <lastmod>2021-06-11T02:30:04.251Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
