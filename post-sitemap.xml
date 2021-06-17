@@ -9,8 +9,24 @@
 
 
     <url>
+        <loc>https://rimiiii.github.io/2021/06/11/error1/</loc>
+        <lastmod>2021-06-17T02:39:14.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://rimiiii.github.io/2021/06/15/benchmarking-deep-learning-on-healthcare-datasets/</loc>
-        <lastmod>2021-06-15T14:12:08.551Z</lastmod>
+        <lastmod>2021-06-16T14:41:57.767Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/04/29/tech-blog/</loc>
+        <lastmod>2021-06-16T14:40:10.630Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,24 +41,8 @@
     </url>
 
     <url>
-        <loc>https://rimiiii.github.io/2021/06/11/error1/</loc>
-        <lastmod>2021-06-11T05:26:13.054Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://rimiiii.github.io/2021/04/30/notion-template/</loc>
         <lastmod>2021-06-11T03:14:42.788Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/04/29/tech-blog/</loc>
-        <lastmod>2021-06-11T03:13:46.755Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
