@@ -11755,7 +11755,7 @@ body.night .navbar-main .navbar-menu .navbar-item:focus {
   color: #fff;
   background-color: #373d48;
 }
-body.night .navbar .navbar-main,
+body.night .navbar,
 body.night .navbar-brand,
 body.night .navbar-menu,
 body.night .card,
@@ -12096,7 +12096,7 @@ body.night .twikoo code {
     color: #fff;
     background-color: #373d48;
   }
-  body:not(.light) .navbar .navbar-main,
+  body:not(.light) .navbar,
   body:not(.light) .navbar-brand,
   body:not(.light) .navbar-menu,
   body:not(.light) .card,
