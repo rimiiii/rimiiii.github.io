@@ -75,6 +75,12 @@ body.night .hljs-link {
 }
 body.night .content code {
   color: #cbba7d;
+/* 아래는 배경 관련 설정 */
+  background-color: #525a69;
+  padding: 3px 5px;
+  margin: 0 2px;
+  border-radius: 2px;
+  white-space: nowrap;
 }
 body.night #night-nav #night-icon:before {
   content: '\f0eb';
@@ -416,6 +422,12 @@ body.night .twikoo code {
   }
   body:not(.light) .content code {
     color: #cbba7d;
+/* 아래는 배경 관련 설정 */
+    background-color: #525a69;
+    padding: 3px 5px;
+    margin: 0 2px;
+    border-radius: 2px;
+    white-space: nowrap;
   }
   body:not(.light) #night-nav #night-icon:before {
     content: '\f0eb';
