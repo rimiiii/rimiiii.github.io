@@ -146,33 +146,6 @@
     </item>
     
     <item>
-      <title>[Python/백준] 4673번 셀프 넘버</title>
-      <link>https://rimiiii.github.io/2021/05/27/baekjoon5/</link>
-      <guid>https://rimiiii.github.io/2021/05/27/baekjoon5/</guid>
-      <pubDate>Thu, 27 May 2021 12:06:29 GMT</pubDate>
-      
-      <description>&lt;p&gt;10000보다 작거나 같은 셀프 넘버를 한 줄에 하나씩 출력하는 프로그램을 작성하시오.&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>10000&#xBCF4;&#xB2E4; &#xC791;&#xAC70;&#xB098; &#xAC19;&#xC740; &#xC140;&#xD504; &#xB118;&#xBC84;&#xB97C; &#xD55C; &#xC904;&#xC5D0; &#xD558;&#xB098;&#xC529; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC791;&#xC131;&#xD558;&#xC2DC;&#xC624;.</p><span id="more"></span><p>&#xC140;&#xD504; &#xB118;&#xBC84;&#xB294; 1949&#xB144; &#xC778;&#xB3C4; &#xC218;&#xD559;&#xC790; D.R. Kaprekar&#xAC00; &#xC774;&#xB984; &#xBD99;&#xC600;&#xB2E4;. &#xC591;&#xC758; &#xC815;&#xC218; n&#xC5D0; &#xB300;&#xD574;&#xC11C; d(n)&#xC744; n&#xACFC; n&#xC758; &#xAC01; &#xC790;&#xB9AC;&#xC218;&#xB97C; &#xB354;&#xD558;&#xB294; &#xD568;&#xC218;&#xB77C;&#xACE0; &#xC815;&#xC758;&#xD558;&#xC790;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4;, d(75) = 75+7+5 = 87&#xC774;&#xB2E4;.&#xC591;&#xC758; &#xC815;&#xC218; n&#xC774; &#xC8FC;&#xC5B4;&#xC84C;&#xC744; &#xB54C;, &#xC774; &#xC218;&#xB97C; &#xC2DC;&#xC791;&#xD574;&#xC11C; n, d(n), d(d(n)), d(d(d(n))), &#x2026;&#xACFC; &#xAC19;&#xC740; &#xBB34;&#xD55C; &#xC218;&#xC5F4;&#xC744; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4;, 33&#xC73C;&#xB85C; &#xC2DC;&#xC791;&#xD55C;&#xB2E4;&#xBA74; &#xB2E4;&#xC74C; &#xC218;&#xB294; 33 + 3 + 3 = 39&#xC774;&#xACE0;, &#xADF8; &#xB2E4;&#xC74C; &#xC218;&#xB294; 39 + 3 + 9 = 51, &#xB2E4;&#xC74C; &#xC218;&#xB294; 51 + 5 + 1 = 57&#xC774;&#xB2E4;. &#xC774;&#xB7F0;&#xC2DD;&#xC73C;&#xB85C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC218;&#xC5F4;&#xC744; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xB2E4;. 33, 39, 51, 57, 69, 84, 96, 111, 114, 120, 123, 129, 141, &#x2026; n&#xC744; d(n)&#xC758; &#xC0DD;&#xC131;&#xC790;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. &#xC704;&#xC758; &#xC218;&#xC5F4;&#xC5D0;&#xC11C; 33&#xC740; 39&#xC758; &#xC0DD;&#xC131;&#xC790;&#xC774;&#xACE0;, 39&#xB294; 51&#xC758; &#xC0DD;&#xC131;&#xC790;, 51&#xC740; 57&#xC758; &#xC0DD;&#xC131;&#xC790;&#xC774;&#xB2E4;. &#xC0DD;&#xC131;&#xC790;&#xAC00; &#xD55C; &#xAC1C;&#xBCF4;&#xB2E4; &#xB9CE;&#xC740; &#xACBD;&#xC6B0;&#xB3C4; &#xC788;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4;, 101&#xC740; &#xC0DD;&#xC131;&#xC790;&#xAC00; 2&#xAC1C;(91&#xACFC; 100) &#xC788;&#xB2E4;. &#xC0DD;&#xC131;&#xC790;&#xAC00; &#xC5C6;&#xB294; &#xC22B;&#xC790;&#xB97C; &#xC140;&#xD504; &#xB118;&#xBC84;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. 100&#xBCF4;&#xB2E4; &#xC791;&#xC740; &#xC140;&#xD504; &#xB118;&#xBC84;&#xB294; &#xCD1D; 13&#xAC1C;&#xAC00; &#xC788;&#xB2E4;. 1, 3, 5, 7, 9, 20, 31, 42, 53, 64, 75, 86, 97</p><h1 id="&#xC785;&#xB825;"><a href="#&#xC785;&#xB825;" class="headerlink" title="&#xC785;&#xB825;"></a>&#xC785;&#xB825;</h1><p>&#xC785;&#xB825;&#xC740; &#xC5C6;&#xB2E4;.</p><h1 id="&#xCD9C;&#xB825;"><a href="#&#xCD9C;&#xB825;" class="headerlink" title="&#xCD9C;&#xB825;"></a>&#xCD9C;&#xB825;</h1><p>10,000&#xBCF4;&#xB2E4; &#xC791;&#xAC70;&#xB098; &#xAC19;&#xC740; &#xC140;&#xD504; &#xB118;&#xBC84;&#xB97C; &#xD55C; &#xC904;&#xC5D0; &#xD558;&#xB098;&#xC529; &#xC99D;&#xAC00;&#xD558;&#xB294; &#xC21C;&#xC11C;&#xB85C; &#xCD9C;&#xB825;&#xD55C;&#xB2E4;.</p><h1 id="&#xD480;&#xC774;"><a href="#&#xD480;&#xC774;" class="headerlink" title="&#xD480;&#xC774;"></a>&#xD480;&#xC774;</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">original_set = <span class="built_in">set</span>(<span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10001</span>))</span><br><span class="line">generated_set = <span class="built_in">set</span>()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10001</span>):</span><br><span class="line">  <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">str</span>(i):</span><br><span class="line">    i += <span class="built_in">int</span>(j)</span><br><span class="line">  generated_set.add(i)</span><br><span class="line"></span><br><span class="line">self_num = <span class="built_in">sorted</span>(original_set - generated_set)</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> self_num:</span><br><span class="line">  <span class="built_in">print</span>(num)</span><br></pre></td></tr></table></figure><p>&#xC22B;&#xC790;&#xB4E4;&#xC758; &#xAC01;&#xAC01;&#xC758; &#xC790;&#xB9BF;&#xC218;&#xB97C; &#xB044;&#xC9D1;&#xC5B4;&#xB0B4;&#xB294; &#xAC83;&#xC740; str&#xC744; &#xC774;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; 33&#xC774;&#xB77C;&#xBA74; str(33)&#xC73C;&#xB85C; &#x2018;33&#x2019;&#xC73C;&#xB85C; string &#xD615;&#xD0DC;&#xB85C; &#xB9CC;&#xB4E0; &#xB4A4; for&#xBB38;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xD558;&#xB098;&#xC758; &#xC22B;&#xC790;&#xC529; &#xB044;&#xC9D1;&#xC5B4;&#xB0B4;&#xB294; &#xAC83;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>]]></content:encoded>
-      
-      
-      <category domain="https://rimiiii.github.io/categories/ALGORITHM/">ALGORITHM</category>
-      
-      <category domain="https://rimiiii.github.io/categories/ALGORITHM/BAEKJOON/">BAEKJOON</category>
-      
-      
-      <category domain="https://rimiiii.github.io/tags/algorithm/">algorithm</category>
-      
-      <category domain="https://rimiiii.github.io/tags/python/">python</category>
-      
-      
-      <comments>https://rimiiii.github.io/2021/05/27/baekjoon5/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
       <title>[Python/백준] 10818번 최소, 최대</title>
       <link>https://rimiiii.github.io/2021/05/27/baekjoon6/</link>
       <guid>https://rimiiii.github.io/2021/05/27/baekjoon6/</guid>
@@ -196,6 +169,33 @@
       
       
       <comments>https://rimiiii.github.io/2021/05/27/baekjoon6/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[Python/백준] 4673번 셀프 넘버</title>
+      <link>https://rimiiii.github.io/2021/05/27/baekjoon5/</link>
+      <guid>https://rimiiii.github.io/2021/05/27/baekjoon5/</guid>
+      <pubDate>Thu, 27 May 2021 12:06:29 GMT</pubDate>
+      
+      <description>&lt;p&gt;10000보다 작거나 같은 셀프 넘버를 한 줄에 하나씩 출력하는 프로그램을 작성하시오.&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>10000&#xBCF4;&#xB2E4; &#xC791;&#xAC70;&#xB098; &#xAC19;&#xC740; &#xC140;&#xD504; &#xB118;&#xBC84;&#xB97C; &#xD55C; &#xC904;&#xC5D0; &#xD558;&#xB098;&#xC529; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC791;&#xC131;&#xD558;&#xC2DC;&#xC624;.</p><span id="more"></span><p>&#xC140;&#xD504; &#xB118;&#xBC84;&#xB294; 1949&#xB144; &#xC778;&#xB3C4; &#xC218;&#xD559;&#xC790; D.R. Kaprekar&#xAC00; &#xC774;&#xB984; &#xBD99;&#xC600;&#xB2E4;. &#xC591;&#xC758; &#xC815;&#xC218; n&#xC5D0; &#xB300;&#xD574;&#xC11C; d(n)&#xC744; n&#xACFC; n&#xC758; &#xAC01; &#xC790;&#xB9AC;&#xC218;&#xB97C; &#xB354;&#xD558;&#xB294; &#xD568;&#xC218;&#xB77C;&#xACE0; &#xC815;&#xC758;&#xD558;&#xC790;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4;, d(75) = 75+7+5 = 87&#xC774;&#xB2E4;.&#xC591;&#xC758; &#xC815;&#xC218; n&#xC774; &#xC8FC;&#xC5B4;&#xC84C;&#xC744; &#xB54C;, &#xC774; &#xC218;&#xB97C; &#xC2DC;&#xC791;&#xD574;&#xC11C; n, d(n), d(d(n)), d(d(d(n))), &#x2026;&#xACFC; &#xAC19;&#xC740; &#xBB34;&#xD55C; &#xC218;&#xC5F4;&#xC744; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4;, 33&#xC73C;&#xB85C; &#xC2DC;&#xC791;&#xD55C;&#xB2E4;&#xBA74; &#xB2E4;&#xC74C; &#xC218;&#xB294; 33 + 3 + 3 = 39&#xC774;&#xACE0;, &#xADF8; &#xB2E4;&#xC74C; &#xC218;&#xB294; 39 + 3 + 9 = 51, &#xB2E4;&#xC74C; &#xC218;&#xB294; 51 + 5 + 1 = 57&#xC774;&#xB2E4;. &#xC774;&#xB7F0;&#xC2DD;&#xC73C;&#xB85C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC218;&#xC5F4;&#xC744; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xB2E4;. 33, 39, 51, 57, 69, 84, 96, 111, 114, 120, 123, 129, 141, &#x2026; n&#xC744; d(n)&#xC758; &#xC0DD;&#xC131;&#xC790;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. &#xC704;&#xC758; &#xC218;&#xC5F4;&#xC5D0;&#xC11C; 33&#xC740; 39&#xC758; &#xC0DD;&#xC131;&#xC790;&#xC774;&#xACE0;, 39&#xB294; 51&#xC758; &#xC0DD;&#xC131;&#xC790;, 51&#xC740; 57&#xC758; &#xC0DD;&#xC131;&#xC790;&#xC774;&#xB2E4;. &#xC0DD;&#xC131;&#xC790;&#xAC00; &#xD55C; &#xAC1C;&#xBCF4;&#xB2E4; &#xB9CE;&#xC740; &#xACBD;&#xC6B0;&#xB3C4; &#xC788;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4;, 101&#xC740; &#xC0DD;&#xC131;&#xC790;&#xAC00; 2&#xAC1C;(91&#xACFC; 100) &#xC788;&#xB2E4;. &#xC0DD;&#xC131;&#xC790;&#xAC00; &#xC5C6;&#xB294; &#xC22B;&#xC790;&#xB97C; &#xC140;&#xD504; &#xB118;&#xBC84;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. 100&#xBCF4;&#xB2E4; &#xC791;&#xC740; &#xC140;&#xD504; &#xB118;&#xBC84;&#xB294; &#xCD1D; 13&#xAC1C;&#xAC00; &#xC788;&#xB2E4;. 1, 3, 5, 7, 9, 20, 31, 42, 53, 64, 75, 86, 97</p><h1 id="&#xC785;&#xB825;"><a href="#&#xC785;&#xB825;" class="headerlink" title="&#xC785;&#xB825;"></a>&#xC785;&#xB825;</h1><p>&#xC785;&#xB825;&#xC740; &#xC5C6;&#xB2E4;.</p><h1 id="&#xCD9C;&#xB825;"><a href="#&#xCD9C;&#xB825;" class="headerlink" title="&#xCD9C;&#xB825;"></a>&#xCD9C;&#xB825;</h1><p>10,000&#xBCF4;&#xB2E4; &#xC791;&#xAC70;&#xB098; &#xAC19;&#xC740; &#xC140;&#xD504; &#xB118;&#xBC84;&#xB97C; &#xD55C; &#xC904;&#xC5D0; &#xD558;&#xB098;&#xC529; &#xC99D;&#xAC00;&#xD558;&#xB294; &#xC21C;&#xC11C;&#xB85C; &#xCD9C;&#xB825;&#xD55C;&#xB2E4;.</p><h1 id="&#xD480;&#xC774;"><a href="#&#xD480;&#xC774;" class="headerlink" title="&#xD480;&#xC774;"></a>&#xD480;&#xC774;</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">original_set = <span class="built_in">set</span>(<span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10001</span>))</span><br><span class="line">generated_set = <span class="built_in">set</span>()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10001</span>):</span><br><span class="line">  <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">str</span>(i):</span><br><span class="line">    i += <span class="built_in">int</span>(j)</span><br><span class="line">  generated_set.add(i)</span><br><span class="line"></span><br><span class="line">self_num = <span class="built_in">sorted</span>(original_set - generated_set)</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> self_num:</span><br><span class="line">  <span class="built_in">print</span>(num)</span><br></pre></td></tr></table></figure><p>&#xC22B;&#xC790;&#xB4E4;&#xC758; &#xAC01;&#xAC01;&#xC758; &#xC790;&#xB9BF;&#xC218;&#xB97C; &#xB044;&#xC9D1;&#xC5B4;&#xB0B4;&#xB294; &#xAC83;&#xC740; str&#xC744; &#xC774;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; 33&#xC774;&#xB77C;&#xBA74; str(33)&#xC73C;&#xB85C; &#x2018;33&#x2019;&#xC73C;&#xB85C; string &#xD615;&#xD0DC;&#xB85C; &#xB9CC;&#xB4E0; &#xB4A4; for&#xBB38;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xD558;&#xB098;&#xC758; &#xC22B;&#xC790;&#xC529; &#xB044;&#xC9D1;&#xC5B4;&#xB0B4;&#xB294; &#xAC83;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>]]></content:encoded>
+      
+      
+      <category domain="https://rimiiii.github.io/categories/ALGORITHM/">ALGORITHM</category>
+      
+      <category domain="https://rimiiii.github.io/categories/ALGORITHM/BAEKJOON/">BAEKJOON</category>
+      
+      
+      <category domain="https://rimiiii.github.io/tags/algorithm/">algorithm</category>
+      
+      <category domain="https://rimiiii.github.io/tags/python/">python</category>
+      
+      
+      <comments>https://rimiiii.github.io/2021/05/27/baekjoon5/#disqus_thread</comments>
       
     </item>
     
