@@ -10835,9 +10835,13 @@ article.article .content pre {
   font-size: 0.85em;
 }
 article.article .content code {
-  padding: 0;
-  background: transparent;
-  overflow-wrap: break-word;
+  color: #ff3860;
+/* 아래는 배경 관련 설정 */
+  background-color: #f7f7f7;
+  padding: 3px 5px;
+  margin: 0 2px;
+  border-radius: 2px;
+  white-space: nowrap;
 }
 article.article .content blockquote.pullquote {
   float: right;
