@@ -10834,7 +10834,7 @@ article.article .content pre {
   font-size: 0.85em;
 }
 article.article .content code {
-  color: #ff3860;
+  color: #f5a614;
 /* 아래는 배경 관련 설정 */
   background-color: #f7f7f7;
   padding: 3px 5px;
@@ -10934,6 +10934,9 @@ a.article-nav-next span {
   word-wrap: break-word;
   white-space: normal;
 }
+a {
+  color: #f58c14;
+}
 .navbar-main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
@@ -11007,7 +11010,7 @@ footer.footer .level-end .field {
 .pagination .pagination-ellipsis a,
 .pagination .pagination-previous a,
 .pagination .pagination-next a {
-  color: #363636;
+  color: #e4840e;
 }
 .pagination .pagination-link,
 .pagination .pagination-previous,
@@ -11077,7 +11080,7 @@ footer.footer .level-end .field {
 }
 .searchbox a,
 .searchbox a:hover {
-  color: inherit;
+  color: #e4840e;
   text-decoration: none;
 }
 .searchbox input {
@@ -11907,7 +11910,7 @@ body.night .link-muted {
   color: #c0c0c0 !important;
 }
 body.night a {
-  color: #5299e0;
+  color: #b3906d;
 }
 body.night a:hover {
   color: #fff;
@@ -12254,7 +12257,7 @@ body.night .twikoo code {
     color: #c0c0c0 !important;
   }
   body:not(.light) a {
-    color: #5299e0;
+    color: #b3906d;
   }
   body:not(.light) a:hover {
     color: #fff;

@@ -252,7 +252,7 @@ body.night .link-muted {
   color: #c0c0c0 !important;
 }
 body.night a {
-  color: #5299e0;
+  color: #b3906d;
 }
 body.night a:hover {
   color: #fff;
@@ -599,7 +599,7 @@ body.night .twikoo code {
     color: #c0c0c0 !important;
   }
   body:not(.light) a {
-    color: #5299e0;
+    color: #b3906d;
   }
   body:not(.light) a:hover {
     color: #fff;
