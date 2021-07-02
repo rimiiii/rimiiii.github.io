@@ -9,72 +9,8 @@
 
 
     <url>
-        <loc>https://rimiiii.github.io/2021/04/29/tech-blog/</loc>
-        <lastmod>2021-07-01T14:42:58.013Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/06/28/python-tips/</loc>
-        <lastmod>2021-06-28T13:28:37.687Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/06/15/benchmarking-deep-learning-on-healthcare-datasets/</loc>
-        <lastmod>2021-06-20T22:56:49.542Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/06/11/error1/</loc>
-        <lastmod>2021-06-20T22:55:56.898Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/06/17/icarus-dark/</loc>
-        <lastmod>2021-06-20T14:33:45.875Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2020/07/03/linux1/</loc>
-        <lastmod>2021-06-17T14:53:29.421Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/04/30/notion-template/</loc>
-        <lastmod>2021-06-11T03:14:42.788Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://rimiiii.github.io/2021/05/11/event-prediction/</loc>
-        <lastmod>2021-06-11T03:06:38.442Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://rimiiii.github.io/2021/04/15/baekjoon2/</loc>
-        <lastmod>2021-06-11T02:31:02.540Z</lastmod>
+        <lastmod>2021-07-02T05:30:32.366Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -82,7 +18,7 @@
 
     <url>
         <loc>https://rimiiii.github.io/2021/04/19/baekjoon3/</loc>
-        <lastmod>2021-06-11T02:30:49.033Z</lastmod>
+        <lastmod>2021-07-02T05:30:26.013Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -90,7 +26,7 @@
 
     <url>
         <loc>https://rimiiii.github.io/2021/05/06/baekjoon4/</loc>
-        <lastmod>2021-06-11T02:30:40.279Z</lastmod>
+        <lastmod>2021-07-02T05:30:19.673Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -98,7 +34,7 @@
 
     <url>
         <loc>https://rimiiii.github.io/2021/05/27/baekjoon5/</loc>
-        <lastmod>2021-06-11T02:30:31.633Z</lastmod>
+        <lastmod>2021-07-02T05:30:14.640Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -106,7 +42,7 @@
 
     <url>
         <loc>https://rimiiii.github.io/2021/05/27/baekjoon6/</loc>
-        <lastmod>2021-06-11T02:30:22.221Z</lastmod>
+        <lastmod>2021-07-02T05:30:09.425Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -114,7 +50,47 @@
 
     <url>
         <loc>https://rimiiii.github.io/2021/05/27/baekjoon7/</loc>
-        <lastmod>2021-06-11T02:30:13.601Z</lastmod>
+        <lastmod>2021-07-02T05:30:02.377Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/06/15/benchmarking-deep-learning-on-healthcare-datasets/</loc>
+        <lastmod>2021-07-02T05:29:51.417Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/06/11/error1/</loc>
+        <lastmod>2021-07-02T05:29:41.038Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/05/11/event-prediction/</loc>
+        <lastmod>2021-07-02T05:29:33.907Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/06/17/icarus-dark/</loc>
+        <lastmod>2021-07-02T05:28:52.035Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2020/07/03/linux1/</loc>
+        <lastmod>2021-07-02T05:28:44.296Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -122,7 +98,23 @@
 
     <url>
         <loc>https://rimiiii.github.io/2021/06/09/midnight-library/</loc>
-        <lastmod>2021-06-11T02:29:52.019Z</lastmod>
+        <lastmod>2021-07-02T05:28:04.989Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/04/30/notion-template/</loc>
+        <lastmod>2021-07-02T05:27:52.949Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/06/28/python-tips/</loc>
+        <lastmod>2021-07-02T05:27:44.305Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -130,7 +122,15 @@
 
     <url>
         <loc>https://rimiiii.github.io/2021/03/29/baekjoon1/</loc>
-        <lastmod>2021-06-11T02:29:28.551Z</lastmod>
+        <lastmod>2021-07-02T05:27:31.008Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://rimiiii.github.io/2021/04/29/tech-blog/</loc>
+        <lastmod>2021-07-02T05:25:17.907Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
